@@ -13,9 +13,9 @@
 </head>
 <body>
     <div class="container p-3">
-      <marquee scrollamount="15" style="color:red;font-size:30PX;text-align:center;">Please fill this Registration form.</marquee>
+      <!-- <marquee scrollamount="15" style="color:red;font-size:30PX;text-align:center;">Please fill this Registration form.</marquee> -->
         <h2 style="text-align: center;">Registration</h2>
-        <form action="" name="registration" autocomplete="on" onsubmit="return changeText()">
+        <form method="post" name="registration" autocomplete="on" onsubmit="return changeText()" id="frmSubmit">
 
         <!-- First Name -->
 
@@ -57,18 +57,19 @@
         <!-- Password -->
       
           <label for="password">Password:</label>
-          <input type="password" name="password" id="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;" class="p-3">
+          <input type="password" name="password" id="password" placeholder="Password" class="p-3">
 
         <!-- Confirm Password -->
 
           <label for="password">Confirm Password:</label>
-          <input type="password" name="password1" id="password1" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;" class="p-3">
+          <input type="password" name="password1" id="password1" onclick="emptycpwdError()" placeholder="Confirm Password" class="p-3">
 
         <!-- Description -->
 
           <div class="form-group">
             <label for="description">Description:</label>
-            <textarea class="form-control" name="textarea" rows="5" id="comment" class="p-3"></textarea>
+            <textarea class="form-control" name="
+            " rows="5" id="comment" class="p-3"></textarea>
           </div>
 
         <!-- Upload File -->
@@ -85,7 +86,7 @@
           </div>
         
         <!-- Submit button -->
-      
+          
           <button type="submit" value="Submit" class="bg-primary">Submit</button>
 
         <!-- My info -->
